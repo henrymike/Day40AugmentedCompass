@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Augmented Compass-->
+        <!--Augmented Compass 🕵-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AugmentedCompass" customModuleProvider="target" sceneMemberID="viewController">
@@ -42,7 +42,7 @@
                             <constraint firstItem="t1n-i5-Wnu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="186" id="tbv-5d-o9U"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Augmented Compass" id="LEM-kU-Kxz"/>
+                    <navigationItem key="navigationItem" title="Augmented Compass 🕵" id="LEM-kU-Kxz"/>
                     <connections>
                         <outlet property="cameraView" destination="xxb-01-u5C" id="IJD-Lo-saN"/>
                         <outlet property="compassHeadingLabel" destination="t1n-i5-Wnu" id="hZh-XE-bpw"/>

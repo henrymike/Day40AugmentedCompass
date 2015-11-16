@@ -18,8 +18,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var cameraView :UIView!
     var captureSession = AVCaptureSession()
     var previewLayer :AVCaptureVideoPreviewLayer?
-//    @IBOutlet weak var capturedImage :UIImageView!
-//    var stillImageOutput = AVCaptureStillImageOutput()
     
     func startCaptureSession() {
         captureSession.sessionPreset = AVCaptureSessionPresetPhoto
@@ -37,12 +35,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         if error == nil && captureSession.canAddInput(input) {
             captureSession.addInput(input)
             
-//            stillImageOutput = AVCaptureStillImageOutput()
-//            stillImageOutput.outputSettings = [AVVideoCodecKey: AVVideoCodecJPEG]
-//            if captureSession.canAddOutput(stillImageOutput) {
-//                captureSession.addOutput(stillImageOutput)
-//            }
-            
             previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
             previewLayer!.videoGravity = AVLayerVideoGravityResizeAspectFill
             previewLayer!.connection?.videoOrientation = .Portrait
@@ -52,22 +44,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
-//    @IBAction func didPressTakePhotoButton(sender: UIButton) {
-//        if let videoConnection = stillImageOutput.connectionWithMediaType(AVMediaTypeVideo) {
-//            videoConnection.videoOrientation = .Portrait
-//            stillImageOutput.captureStillImageAsynchronouslyFromConnection(videoConnection, completionHandler: { (sampleBuffer, error) -> Void in
-//                if sampleBuffer != nil {
-//                    let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer)
-//                    let dataProvider = CGDataProviderCreateWithCFData(imageData)
-//                    let cgImageRef = CGImageCreateWithJPEGDataProvider(dataProvider, nil, true, .RenderingIntentDefault)
-//                    
-//                    let image = UIImage(CGImage: cgImageRef!, scale: 1.0, orientation: .Right)
-//                    self.capturedImage.image = image
-//                }
-//            })
-//        }
-//        
-//    }
+
     
     //MARK: - Compass Methods
     
